@@ -6,6 +6,6 @@
 # Импор всех функций из модуля
 from famous_persons import *
 
-name, date = get_random_person()
-
-print(name, date)
+def fp():
+    name, date = get_random_person()
+    print(name, date)
