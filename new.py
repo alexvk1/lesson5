@@ -3,5 +3,5 @@ from famous_info import fp
 #print('hello')
 #print('World')
 
-print('Go')
+print('Go now')
 gr()
