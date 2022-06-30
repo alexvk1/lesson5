@@ -7,9 +7,12 @@
 #from famous_persons import *
 
 # Импорт нужных функций
-from famous_persons import get_random_person as gr
+from lesson5modules.famous_persons import get_random_person as gr
 
 def fp():
     #name, date = get_random_person()
     name, date = gr()
     print(name, date)
+
+if (__name__=='__main__'):
+    print('__name__',__name__)
