@@ -45,13 +45,27 @@ x. выход.''')
             if (i not in sys_files):
                 print(i)
         file=input('Имя файла для удаления:')
+        err=0 #0-нет ошибок, 1-каталог, 2-не получилось удалить
         try:
-            os.remove(file)
-            # TODO: Сделать удаление директорий, сейчас работает только на файлы
-            print(f'Ошибка удаления файла ', file)
-        except:
-            print(f'Ошибка удаления файла {file}')
+            os.remove(''+file)
 
+            print(f'Файл {file} удалён')
+
+        except:
+            err=1
+        if (err==1):
+            print('Удаляем каталог')
+            if (os.path.isdir(file)):
+                try:
+                    os.rmdir(file)
+                    err=0
+                except:
+                    err=2
+
+        if (err==0):
+            print(f'Каталог {file} удалён')
+        elif (err==2):
+            print(f'Невозможно удалить {file}')
     if val != 'X' and val != 'x' and val != 'Ч' and val != 'ч':
         val = 0
     # fp()
