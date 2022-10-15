@@ -14,8 +14,14 @@ sys_files={'.git','.idea','lesson5modules','LICENSE','new.py','oo.py','other.py'
 val = 0
 print('__name__',__name__)
 
+def list_dir():
+    for filename in os.listdir('.'):
+        if (filename not in sys_files):
+            print(f'{filename}')
+
+
 while val == 0:
-    print('Главное меню 15.10.22 Версия 2')
+    print('Главное меню (22-10-15 20:21)')
     print('''1. создать папку;
 2. удалить (файл/папку);
 3. копировать (файл/папку);
@@ -29,7 +35,7 @@ while val == 0:
 11. смена рабочей директории (*необязательный пункт);
 x. выход.''')
     val = input('?')
-    print(val)
+    print(val+'\n----НАЧАЛО РАБОТЫ----')
     if (val=='1'):
         print('Создаём папку:')
         dirname=input('Введите название папки:')
@@ -66,7 +72,17 @@ x. выход.''')
             print(f'Каталог {file} удалён')
         elif (err==2):
             print(f'Невозможно удалить {file}')
+    if (val=='3'):
+        print('Список папок и файлов:')
+        list_dir()
+        file = input('Скопировать что?')
+        if (os.is)
+        new_name
+
+    if (val=='4'):
+        list_dir()
     if val != 'X' and val != 'x' and val != 'Ч' and val != 'ч':
         val = 0
     # fp()
+    print(f'-----КОНЕЦ РАБОТЫ-----')
 print (fp())
